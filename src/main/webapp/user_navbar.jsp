@@ -8,7 +8,7 @@ if (userNav == null)
 <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-primary">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="profile.jsp"><span
-			class="fa fa-facebook-square"></span> FacebookForCoders</a>
+			class="fa fa-facebook-square"></span> Code-Blog</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
