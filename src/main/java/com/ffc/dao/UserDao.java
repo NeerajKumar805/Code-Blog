@@ -18,7 +18,7 @@ public class UserDao {
 	public boolean saveUser(User user) {
 		boolean f = false;
 		try {
-			String query = "INSERT INTO USER1(NAME, EMAIL, GENDER, PASSWORD, ABOUT) VALUE(?,?,?,?,?)";
+			String query = "INSERT INTO USERS(NAME, EMAIL, GENDER, PASSWORD, ABOUT) VALUE(?,?,?,?,?)";
 			PreparedStatement pstmt = this.con.prepareStatement(query);
 			pstmt.setString(1, user.getName());
 			pstmt.setString(2, user.getEmail());
@@ -41,7 +41,7 @@ public class UserDao {
 
 		try {
 
-			String query = "select * from user1 where email =? and password=?";
+			String query = "select * from users where email =? and password=?";
 			PreparedStatement pstmt = con.prepareStatement(query);
 			pstmt.setString(1, email);
 			pstmt.setString(2, password);
@@ -75,7 +75,7 @@ public class UserDao {
 	public boolean updateUser(User user) {
 		boolean f = false;
 		try {
-			String query = "UPDATE USER1 SET NAME=?, EMAIL=?, GENDER=?, PASSWORD=?, ABOUT=?, PROFILE=? WHERE ID=?";
+			String query = "UPDATE USERS SET NAME=?, EMAIL=?, GENDER=?, PASSWORD=?, ABOUT=?, PROFILE=? WHERE ID=?";
 			PreparedStatement pstmt = con.prepareStatement(query);
 			pstmt.setString(1, user.getName());
 			pstmt.setString(2, user.getEmail());
@@ -95,7 +95,7 @@ public class UserDao {
 	public User getUserByUserId(int uid) {
 		User user =null;
 		try {
-			String q = "SELECT * FROM USER1 WHERE ID=?";
+			String q = "SELECT * FROM USERS WHERE ID=?";
 			PreparedStatement p = this.con.prepareStatement(q);
 			p.setInt(1, uid);
 			ResultSet set = p.executeQuery();
@@ -124,7 +124,7 @@ public class UserDao {
 	public boolean deleteUser(int id) {
 		boolean f = false;
 		try {
-			String query = "DELETE FROM USER1 WHERE ID = ?";
+			String query = "DELETE FROM USERS WHERE ID = ?";
 			PreparedStatement pstmt = this.con.prepareStatement(query);
 			pstmt.setInt(1, id);
 			pstmt.executeUpdate();

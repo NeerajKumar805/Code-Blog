@@ -39,7 +39,7 @@ public class RegisterServlet extends HttpServlet {
 			if(dao.saveUser(user))
 				out.print("done");
 			else {
-				out.print("Oops! This email has already taken...");
+				out.print("Oops! This email has already registerd...");
 			}
 		}
 	}

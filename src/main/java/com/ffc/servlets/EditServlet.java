@@ -43,7 +43,6 @@ public class EditServlet extends HttpServlet {
 		if(!pic.equals(""))
 			user.setProfile(pic);
 
-		// Update the details in the db
 		UserDao dao = new UserDao(ConProvider.getCon());
 		if (dao.updateUser(user)) {
 //			out.println("Details inserted into the database successfully");

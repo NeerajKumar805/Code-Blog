@@ -9,7 +9,7 @@ public class ConProvider {
 	public static Connection getCon() {
 		try {
 			if (conn == null) {
-				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/fbforcoders", "root", "root");
+				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/codeblog", "root", "root");
 				System.out.println("Done");
 			}
 		} catch (Exception e) {
