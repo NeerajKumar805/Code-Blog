@@ -41,7 +41,7 @@ public class AddPostServlet extends HttpServlet {
 			PostDao dao = new PostDao(ConProvider.getCon());
 			if (dao.savePost(p)) {
 
-				String path = "D:\\College_Projects\\FacebookForCoders\\src\\main\\webapp\\blogPics" + File.separator
+				String path = "D:\\College_Projects\\Code-Blog\\src\\main\\webapp\\blogPics" + File.separator
 				+ part.getSubmittedFileName();
 				Helper.saveFile(part.getInputStream(), path);
 				out.println("done");
